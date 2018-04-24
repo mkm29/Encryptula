@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>1081151785935-9i6ca3mh8g9b57mj0es4pbikl3eb1a25.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.1081151785935-9i6ca3mh8g9b57mj0es4pbikl3eb1a25</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCaVU1NY_ZJJ9a8u_mpWnoQfo6KER-Kn_4</string>
+	<key>GCM_SENDER_ID</key>
+	<string>1081151785935</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>smigula.Encryptugla</string>
+	<key>PROJECT_ID</key>
+	<string>encryptugla</string>
+	<key>STORAGE_BUCKET</key>
+	<string>encryptugla.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true></true>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false></false>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:1081151785935:ios:9460d56f022f91b0</string>
+	<key>DATABASE_URL</key>
+	<string>https://encryptugla.firebaseio.com</string>
+</dict>
+</plist>
