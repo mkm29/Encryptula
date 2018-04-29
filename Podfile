@@ -7,6 +7,7 @@ target 'Encryptugla' do
 
   # Pods for Encryptugla
   pod "SimpleKeychain"
+  pod "SwiftyJSON"
   pod 'Firebase/Auth'
   pod 'FirebaseUI', '~> 4.0' 
 

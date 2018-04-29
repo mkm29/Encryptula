@@ -16,13 +16,47 @@ import FirebasePhoneAuthUI
 
 class ViewController: UIViewController, FUIAuthDelegate {
     
-    var authUI: FUIAuth? // = FUIAuth.defaultAuthUI()
+    var authUI: FUIAuth?
+    var encrypt: Encrypt?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        self.setupFirebase()
-        self.presentLogin()
+        //self.setupFirebase()
+        //self.presentLogin()
+        
+        //self.encrypt = Encrypt()
+
+        let nlp = GoogleLanguage()
+        let textToAnaltze = "The financial crisis of 2008 hit many states hard, especially Kentucky. Since then, Kentucky has faced a large state deficit. It currently provides its public school teachers a retirement pension based on years of service, but the expense continues the deficit spending. Supporters of new legislation suggest teachers be required to shoulder some of the cost by contributing, similar to private sector employees. Opponents say changes in the law are broken promises and our teachers deserve more."
+        
+        nlp.analyzeSentiment(text: textToAnaltze) { (error, sentiments) in
+            guard error == nil else {
+                print(error?.localizedDescription)
+                return
+            }
+            if let sentiments = sentiments {
+                print("Total sentiments: ", sentiments.count)
+                print(sentiments)
+            }
+        }
+        
+//        nlp.analyzeEntities(text: textToAnaltze) { (error, entities) in
+//            guard error == nil else {
+//                print(error?.localizedDescription)
+//                return
+//            }
+//            if let entities = entities {
+//                print("Total number of entities: ", entities.count)
+//                for entity in entities {
+//                    print(entity.name)
+//                    if let wiki = entity.wikipediaURL {
+//                        print(wiki)
+//                    }
+//                }
+//            }
+//        }
+        
     }
     
     private func setupFirebase() {
@@ -35,6 +69,10 @@ class ViewController: UIViewController, FUIAuthDelegate {
             FUIPhoneAuth(authUI:FUIAuth.defaultAuthUI()!),
             ]
         self.authUI?.providers = providers
+    }
+    
+    private func setup() {
+        
     }
     
     
@@ -53,10 +91,15 @@ class ViewController: UIViewController, FUIAuthDelegate {
     
     func authUI(_ authUI: FUIAuth, didSignInWith user: FirebaseAuth.User?, error: Error?) {
         // handle user and error as necessary
-        if user != nil {
-            print(user!)
-        } else {
-            print("Unable to login with Firebase")
+        guard error == nil else {
+            print("Unable to login: %@", error?.localizedDescription)
+            return
+        }
+        if let user = user {
+            print("Logged in as uid: %@", user.uid)
+            if let encrypt = self.encrypt {
+                encrypt.uid = user.uid
+            }
         }
     }
 

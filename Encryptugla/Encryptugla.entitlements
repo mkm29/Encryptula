@@ -6,7 +6,7 @@
 	<string>development</string>
 	<key>keychain-access-groups</key>
 	<array>
-		<string>$(AppIdentifierPrefix)smigula.Encryptugla</string>
+		<string>$(AppIdentifierPrefix)smigula.Encryptugla.keys</string>
 	</array>
 </dict>
 </plist>
