@@ -14,8 +14,8 @@ enum Endpoint {
     case sentiment
     case entitySentiment
     case syntax
-    case annotate
-    case classify
+//    case annotate
+//    case classify
 }
 
 class GoogleLanguage {
@@ -34,10 +34,10 @@ class GoogleLanguage {
             urlString += "analyzeEntitySentiment?key=\(googleAPIKey)"
         case .syntax:
             urlString += "analyzeSyntax?key=\(googleAPIKey)"
-        case .annotate:
-            urlString += "annotateText?key=\(googleAPIKey)"
-        case .classify:
-            urlString += "classifyText?key=\(googleAPIKey)"
+//        case .annotate:
+//            urlString += "annotateText?key=\(googleAPIKey)"
+//        case .classify:
+//            urlString += "classifyText?key=\(googleAPIKey)"
         }
         if let googleURL = URL(string: urlString) {
             // Create our request URL
@@ -47,7 +47,10 @@ class GoogleLanguage {
             request.addValue(Bundle.main.bundleIdentifier ?? "", forHTTPHeaderField: "X-Ios-Bundle-Identifier")
             
             // Build our API request
-            let jsonDictionary: [String: Any] = [
+            var jsonDictionary: [String : Any]!
+            
+            
+            jsonDictionary = [
                 "encodingType": "UTF8",
                 "document": [
                     "type": "PLAIN_TEXT",
@@ -145,5 +148,26 @@ class GoogleLanguage {
         }
     }
     
+    func analyzeEntitySentiment(text: String, completion: @escaping (_ error:Error?, _ sentiment: Any?) -> Void) {
+        if let request = createRequest(endpoint: .entitySentiment, forText: text) {
+            DispatchQueue.main.async {
+                self.session.dataTask(with: request, completionHandler: { (data, response, error) in
+                    guard error == nil else {
+                        completion(error, nil)
+                        return
+                    }
+                    if let data = data, let json = self.toJSON(result: data) {
+                        completion(nil, json)
+                    } else {
+                        let error = NSError(domain: "Unable to convert data to JSON", code: 2, userInfo: nil)
+                        completion(error, nil)
+                    }
+                }).resume()
+            }
+        }  else {
+            let error = NSError(domain: "Unable to create URL request", code: 1, userInfo: nil)
+            completion(error, nil)
+        }
+    }
     
 }
