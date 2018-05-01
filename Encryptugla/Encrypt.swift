@@ -28,15 +28,6 @@ class Encrypt {
     
     private var publicKey: SecKey?
     private var privateKey: SecKey?
-
-    init() {
-        //
-        //self.privateKey = self.generateKeyPair().privateKey
-        //print("Private Key: ", self.privateKey)
-        
-        let hash: String = ccSha256(data: "mitch".data(using: .utf8)!)
-        print("SHA256(mitch) -> ", hash)
-    }
     
     func ccSha256(data: Data) -> String {
         var digest: Data = Data(count: Int(CC_SHA256_DIGEST_LENGTH))

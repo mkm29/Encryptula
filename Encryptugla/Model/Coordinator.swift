@@ -18,5 +18,36 @@ class Coordinator {
     let nlp: GoogleLanguage = GoogleLanguage()
     let encrypt: Encrypt = Encrypt()
     
+    enum ReadJSONError: Error {
+        case pathDoesNotExist
+        case unableToConvertToJSON
+    }
     
+    func readQuestionsJSON(jsonFilePrefix: String = "questions") throws -> [Question]? {
+        var questions: [Question] = [Question]()
+        if let path = Bundle.main.path(forResource: jsonFilePrefix, ofType: "json") {
+            do {
+                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
+                let jsonResult = try JSONSerialization.jsonObject(with: data, options: .mutableLeaves)
+                if let jsonResult = jsonResult as? Dictionary<String, AnyObject>, let jsonQuestions = jsonResult["questions"] as? [[String:Any]] {
+                    // do stuff
+                    // now get each question
+                    for question in jsonQuestions {
+                        questions.append(Question.init(fromJson: question))
+                    }
+                } else {
+                    print("Unable to convert to dictionary")
+                    throw ReadJSONError.unableToConvertToJSON
+                    
+                }
+            } catch let error {
+                // handle error
+                throw error
+                
+            }
+        } else {
+            throw ReadJSONError.pathDoesNotExist
+        }
+        return questions
+    }
 }

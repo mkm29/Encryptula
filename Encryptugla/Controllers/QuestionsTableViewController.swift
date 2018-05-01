@@ -11,6 +11,8 @@ import UIKit
 class QuestionsTableViewController: UITableViewController {
     
     var coordinator: Coordinator = Coordinator.shared
+    
+    var questions: [Question]!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,35 +23,38 @@ class QuestionsTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         print("Question TableVC")
-        print(coordinator.user)
+        
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    override func viewDidAppear(_ animated: Bool) {
+        // refresh questions
+        //questions = coordinator.readQuestionsJSON()
     }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return questions.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "questionCell", for: indexPath)
 
         // Configure the cell...
+        let question = questions[indexPath.row]
+        
+        cell.textLabel?.text = question.title
 
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
