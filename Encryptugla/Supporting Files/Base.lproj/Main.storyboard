@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="17i-mC-amE">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -43,10 +43,10 @@
             </objects>
             <point key="canvasLocation" x="25" y="903"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Questions-->
         <scene sceneID="jSN-am-x8j">
             <objects>
-                <tableViewController id="8Oj-cq-wzG" sceneMemberID="viewController">
+                <tableViewController id="8Oj-cq-wzG" customClass="QuestionsTableViewController" customModule="Encryptugla" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="E7N-fi-gCc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -59,6 +59,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="xLH-Fx-opM" kind="show" identifier="showQuestionDetail" id="Yip-yx-WZC"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -66,11 +69,59 @@
                             <outlet property="delegate" destination="8Oj-cq-wzG" id="YRs-pS-NWK"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" systemItem="topRated" id="bhS-E2-t6q"/>
+                    <tabBarItem key="tabBarItem" title="Questions" image="question" id="bhS-E2-t6q"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m8w-RD-cv5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1992.8" y="118.29085457271366"/>
+        </scene>
+        <!--Question View Controller-->
+        <scene sceneID="Dan-Qb-KcW">
+            <objects>
+                <viewController id="8uj-N6-Z4f" customClass="QuestionViewController" customModule="Encryptugla" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dcP-HY-VD3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="HIP-R2-jf4"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="KvH-oj-wlG"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YKr-K8-UD1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3728.8000000000002" y="118.29085457271366"/>
+        </scene>
+        <!--Secure-->
+        <scene sceneID="FMe-Ya-hJB">
+            <objects>
+                <viewController id="UHl-Yg-yJE" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8qx-zV-6BN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tQH-m8-ViL">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="GBR-nC-aR5"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="Lock It Up!" id="Bzb-Up-7sE"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="tQH-m8-ViL" firstAttribute="trailing" secondItem="mm7-1z-pQO" secondAttribute="trailing" id="5eb-EB-dlV"/>
+                            <constraint firstItem="tQH-m8-ViL" firstAttribute="top" secondItem="mm7-1z-pQO" secondAttribute="top" id="RBO-tc-l7x"/>
+                            <constraint firstItem="tQH-m8-ViL" firstAttribute="leading" secondItem="mm7-1z-pQO" secondAttribute="leading" id="dvm-RD-KUz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="mm7-1z-pQO"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Secure" image="lock" id="pFW-KV-D5h"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AB2-Am-SCR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1993" y="865"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="ixI-Hb-ese">
@@ -84,11 +135,34 @@
                     </tabBar>
                     <connections>
                         <segue destination="8Oj-cq-wzG" kind="relationship" relationship="viewControllers" id="91u-lW-VwQ"/>
+                        <segue destination="UHl-Yg-yJE" kind="relationship" relationship="viewControllers" id="ULj-U3-LL9"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yn9-Gf-Pop" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1053.5999999999999" y="118.29085457271366"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="tEK-19-k8r">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xLH-Fx-opM" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="s2x-mw-oE0">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="8uj-N6-Z4f" kind="relationship" relationship="rootViewController" id="t32-8c-QFM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gwK-eF-H9w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2789.5999999999999" y="117.39130434782609"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="lock" width="25" height="25"/>
+        <image name="question" width="25" height="25"/>
+    </resources>
 </document>

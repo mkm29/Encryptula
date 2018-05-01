@@ -23,6 +23,7 @@
 		AF8E29222097DE4B0024C9F1 /* questions.json in Resources */ = {isa = PBXBuildFile; fileRef = AF8E29212097DE4B0024C9F1 /* questions.json */; };
 		AF8E29242097E1000024C9F1 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8E29232097E1000024C9F1 /* TestViewController.swift */; };
 		AF8E292620980C240024C9F1 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8E292520980C240024C9F1 /* Question.swift */; };
+		AF8E292820981A6D0024C9F1 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8E292720981A6D0024C9F1 /* QuestionViewController.swift */; };
 		AF8F1B72209641D200FD1845 /* GoogleStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8F1B71209641D200FD1845 /* GoogleStructs.swift */; };
 		AFA4A9E92094F93400733ECE /* test.m in Sources */ = {isa = PBXBuildFile; fileRef = AFA4A9E82094F93400733ECE /* test.m */; };
 		AFA4A9EB209501D000733ECE /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA4A9EA209501D000733ECE /* Response.swift */; };
@@ -51,6 +52,7 @@
 		AF8E29212097DE4B0024C9F1 /* questions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = questions.json; sourceTree = "<group>"; };
 		AF8E29232097E1000024C9F1 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		AF8E292520980C240024C9F1 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		AF8E292720981A6D0024C9F1 /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 		AF8F1B71209641D200FD1845 /* GoogleStructs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleStructs.swift; sourceTree = "<group>"; };
 		AFA4A9E72094F93400733ECE /* Encryptugla-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Encryptugla-Bridging-Header.h"; sourceTree = "<group>"; };
 		AFA4A9E82094F93400733ECE /* test.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = test.m; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 				AF72CD16208E9C1000940023 /* LoginViewController.swift */,
 				AF7A090620969C1E001F6431 /* QuestionsTableViewController.swift */,
 				AF8E29232097E1000024C9F1 /* TestViewController.swift */,
+				AF8E292720981A6D0024C9F1 /* QuestionViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -379,6 +382,7 @@
 				AF7A090420969937001F6431 /* Coordinator.swift in Sources */,
 				AF7A090720969C1E001F6431 /* QuestionsTableViewController.swift in Sources */,
 				AF72CD17208E9C1000940023 /* LoginViewController.swift in Sources */,
+				AF8E292820981A6D0024C9F1 /* QuestionViewController.swift in Sources */,
 				AF72CD15208E9C1000940023 /* AppDelegate.swift in Sources */,
 				AFA4A9E92094F93400733ECE /* test.m in Sources */,
 				AF8F1B72209641D200FD1845 /* GoogleStructs.swift in Sources */,

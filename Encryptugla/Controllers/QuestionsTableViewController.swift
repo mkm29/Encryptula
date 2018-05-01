@@ -22,13 +22,26 @@ class QuestionsTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
-        print("Question TableVC")
         
+        refreshQuestions()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         // refresh questions
-        //questions = coordinator.readQuestionsJSON()
+        refreshQuestions()
+    }
+    
+    func refreshQuestions() {
+        do {
+            if let gotQuestions = try coordinator.readQuestionsJSON() {
+                questions = gotQuestions
+                tableView.reloadData()
+            }
+        } catch let error {
+            // show an error message
+            questions = [Question]()
+            print(error)
+        }
     }
 
     // MARK: - Table view data source
@@ -50,7 +63,11 @@ class QuestionsTableViewController: UITableViewController {
         // Configure the cell...
         let question = questions[indexPath.row]
         
-        cell.textLabel?.text = question.title
+        if question.title == "" {
+            cell.textLabel?.text = "Sorry there are no questions at this time"
+        } else {
+            cell.textLabel?.text = question.title
+        }
 
         return cell
     }
@@ -91,14 +108,20 @@ class QuestionsTableViewController: UITableViewController {
     }
     */
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        if segue.identifier == "showQuestionDetail" {
+            let navigationController = segue.destination as! UINavigationController
+            let questionVC = navigationController.viewControllers.first as! QuestionViewController
+            // set/pass the question
+            if let questionIndex = tableView.indexPathForSelectedRow?.row {
+                questionVC.question = questions[questionIndex]
+            }
+        }
     }
-    */
 
 }
