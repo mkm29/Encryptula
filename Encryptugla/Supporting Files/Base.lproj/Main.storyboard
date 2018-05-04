@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="17i-mC-amE">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -75,17 +75,42 @@
             </objects>
             <point key="canvasLocation" x="1992.8" y="118.29085457271366"/>
         </scene>
-        <!--Question View Controller-->
+        <!--Title-->
         <scene sceneID="Dan-Qb-KcW">
             <objects>
                 <viewController id="8uj-N6-Z4f" customClass="QuestionViewController" customModule="Encryptugla" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dcP-HY-VD3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="88k-ql-C9e">
+                                <rect key="frame" x="16" y="80" width="343" height="571"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="HIP-R2-jf4" firstAttribute="trailing" secondItem="88k-ql-C9e" secondAttribute="trailing" constant="16" id="Acs-ez-ygV"/>
+                            <constraint firstItem="HIP-R2-jf4" firstAttribute="bottom" secondItem="88k-ql-C9e" secondAttribute="bottom" constant="16" id="elS-t0-FOY"/>
+                            <constraint firstItem="88k-ql-C9e" firstAttribute="top" secondItem="HIP-R2-jf4" secondAttribute="top" constant="16" id="usK-zp-QTG"/>
+                            <constraint firstItem="88k-ql-C9e" firstAttribute="leading" secondItem="HIP-R2-jf4" secondAttribute="leading" constant="16" id="xQU-mT-Vm2"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="HIP-R2-jf4"/>
                     </view>
-                    <navigationItem key="navigationItem" id="KvH-oj-wlG"/>
+                    <navigationItem key="navigationItem" title="Title" id="Wjg-F5-jDa">
+                        <barButtonItem key="leftBarButtonItem" title="&lt;" id="FUp-Fa-MA8">
+                            <connections>
+                                <action selector="back:" destination="8uj-N6-Z4f" id="mOI-na-vWe"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="navTitle" destination="Wjg-F5-jDa" id="rW3-jb-KFt"/>
+                        <outlet property="textView" destination="88k-ql-C9e" id="ybj-j4-EP8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YKr-K8-UD1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

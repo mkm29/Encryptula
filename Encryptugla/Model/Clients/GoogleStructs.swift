@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import SwiftyJSON
 
 struct Entity {
     
@@ -16,14 +15,15 @@ struct Entity {
     var type: String
     var wikipediaURL: String?
     
-    init(fromJSON json: JSON) {
-        //self.json = json
-        self.name = json["name"].stringValue
-        self.salience = json["salience"].floatValue
-        self.type = json["type"].stringValue
-        
-        let metadata = json["metadata"].dictionaryValue
-        if let wiki = metadata["wikipedia_url"]?.stringValue {
+    init(fromJson json: [String:Any]) {
+        self.name = json["name"] as! String
+        if let salienceString = json["salience"] as? String {
+            self.salience = Float(salienceString)!
+        } else {
+            self.salience = 0.0
+        }
+        self.type = json["type"] as! String
+        if let metadata = json["metadata"] as? [String:Any], let wiki = metadata["wikipedia_url"] as? String {
             self.wikipediaURL = wiki
         }
     }
@@ -32,7 +32,7 @@ struct Entity {
 
 struct Sentiment {
     
-    var text: String?
+    var text: String = ""
     var magnitude: Float?
     var score: Float?
     var beginOffset: Int?
@@ -49,23 +49,25 @@ struct Sentiment {
         self.type = type
     }
     
-    init(fromJSON json: JSON, type: SentimentType) {
+    init(fromJSON json: [String: Any], type: SentimentType) {
         self.type = type
         
-        let text = json["text"].dictionaryValue
-        if let content = text["content"] {
-            self.text = content.stringValue
-        }
-        if let offset = text["beginOffset"] {
-            self.beginOffset = offset.int!
+        if let text = json["text"] as? [String: Any] {
+            if let content = text["content"] as? String {
+                self.text = content
+            }
+            if let offset = text["beginOffset"] as? String {
+                self.beginOffset = Int(offset)!
+            }
         }
         
-        let sentimentInfo = json["sentiment"].dictionaryValue
-        if let magnitude = sentimentInfo["magnitude"] {
-            self.magnitude = magnitude.floatValue
-        }
-        if let score = sentimentInfo["score"] {
-            self.score = score.floatValue
+        if let sentiment = json["sentiment"] as? [String:Any] {
+            if let magnitude = sentiment["magnitude"] as? String {
+                self.magnitude = Float(magnitude)!
+            }
+            if let score = sentiment["score"] as? String {
+                self.score = Float(score)!
+            }
         }
     }
     

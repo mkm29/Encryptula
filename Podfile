@@ -6,9 +6,10 @@ target 'Encryptugla' do
   use_frameworks!
 
   # Pods for Encryptugla
-  pod "SimpleKeychain"
-  pod "SwiftyJSON"
+#  pod "SimpleKeychain"
+#  pod "SwiftyJSON"
   pod 'Firebase/Auth'
   pod 'FirebaseUI', '~> 4.0' 
+  pod 'RNCryptor'
 
 end

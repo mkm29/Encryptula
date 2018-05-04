@@ -1,0 +1,292 @@
+{
+    "analysis" : [
+        {
+            "question_id" : 2,
+            "sentiment" : -0.71,
+            "categories" : [
+                            {
+                            "hierarchy" : "health and fitness / disorders / mental disorder / a.d.d.",
+                            "score" : 0.58
+                            },
+                            {
+                            "hierarchy" : "/ law, govt and politics",
+                            "score" : 0.33
+                            },
+                            {
+                            "hierarchy" : "/ law, govt and politics / legal issues / legislation",
+                            "score" : 0.29
+                            }
+                            ],
+            
+            "concepts" : [
+                          {
+                          "concept" : "Economics",
+                          "score" : 0.95
+                          },
+                          {
+                          "concept" : "Pension",
+                          "score" : 0.88
+                          },
+                          {
+                          "concept" : "U.S. state",
+                          "score" : 0.79
+                          },
+                          {
+                          "concept" : "United States",
+                          "score" : 0.78
+                          },
+                          {
+                          "concept" : "Public school",
+                          "score" : 0.77
+                          },
+                          {
+                          "concept" : "Great Depression",
+                          "score" : 0.71
+                          },
+                          {
+                          "concept" : "State",
+                          "score" : 0.65
+                          },
+                          {
+                          "concept" : "Teacher",
+                          "score" : 0.62
+                          }
+                          ],
+            
+            "emotions" : [
+                          {
+                          "joy" : 0.04,
+                          "anger" : 0.23,
+                          "disgust" : 0.39,
+                          "sadness" : 0.53,
+                          "fear" : 0.11
+                          }
+                          ],
+            
+            "keywords" : [
+                          {
+                          "large state deficit" : 0.93,
+                          "private sector employees" : 0.81,
+                          "public school teachers" : 0.81,
+                          "deficit spending" : 0.71,
+                          "financial crisis" : 0.65,
+                          "retirement pension" : 0.63,
+                          "new legislation" : 0.59,
+                          "Kentucky" : 0.4,
+                          "Opponents" : 0.38,
+                          "promises" : 0.38,
+                          "expense" : 0.38,
+                          "Supporters" : 0.36,
+                          "states" : 0.36,
+                          "service" : 0.35,
+                          "changes" : 0.35,
+                          "law" : 0.35
+                          }
+                          ],
+            
+            "entities" : [
+                          {
+                          "type" : "Location",
+                          "name" : "Kentucky",
+                          "score" : 0.79
+                          }
+                          ],
+            
+            "categories" : [
+                            {
+                            "hierarchy" : "/ health and fitness / disorders / mental disorder / a.d.d.",
+                            "score" : 0.58
+                            },
+                            {
+                            "hierarchy" : "/ law, govt and politics",
+                            "score" : 0.33
+                            },
+                            {
+                            "hierarchy" : "/ law, govt and politics / legal issues / legislation",
+                            "score" : 0.29
+                            }
+                            ]
+            },
+            {
+                  "question_id" : 3,
+                  "sentiment" : 0.19,
+                  "categories" : [
+                                  {
+                                  "hierarchy" : "/ technology and computing / software / databases",
+                                  "score" : 0.56
+                                  },
+                                  {
+                                  "hierarchy" : "/ health and fitness / disorders / mental disorder / panic and anxiety",
+                                  "score" : 0.46
+                                  },
+                                  {
+                                  "hierarchy" : "/ sports / auto racing",
+                                  "score" : 0.18
+                                  }
+                                  ],
+                  
+                  "concepts" : [
+                                {
+                                "concept" : "Walking",
+                                "score" : 0.92
+                                },
+                                {
+                                "concept" : "The Road",
+                                "score" : 0.84
+                                }
+                                ],
+                  
+                  "emotions" : [
+                                {
+                                "joy" : 0.22,
+                                "anger" : 0.07,
+                                "disgust" : 0.04,
+                                "sadness" : 0.07,
+                                "fear" : 0.69
+                                }
+                                ],
+                  
+                  "keywords" : [
+                                {
+                                "truly self-driving car" : 0.92,
+                                "nationwide restrictions" : 0.69,
+                                "safety concerns" : 0.66,
+                                "additional regulations" : 0.65,
+                                "test data" : 0.64,
+                                "self-driving tests" : 0.60,
+                                "companies" : 0.44,
+                                "pedestrian" : 0.42,
+                                "transparency" : 0.41,
+                                "innovation" : 0.39,
+                                "technology" : 0.37,
+                                "development" : 0.37,
+                                "road" : 0.36,
+                                "night" : 0.36
+                                }
+                                ],
+                  
+                  "entities" : [
+                                {
+                                "type" : "Quanity",
+                                "name" : "10 years",
+                                "score" : 0.01
+                                }
+                                ],
+                  
+                  "categories" : [
+                                  {
+                                  "hierarchy" : "/ technology and computing / software / databases",
+                                  "score" : 0.56
+                                  },
+                                  {
+                                  "hierarchy" : "/ health and fitness / disorders / mental disorder / panic and anxiety",
+                                  "score" : 0.46
+                                  },
+                                  {
+                                  "hierarchy" : "/ sports / auto racing",
+                                  "score" : 0.18
+                                  }
+                                ]
+                  },
+                  {
+                  "question_id" : 4,
+                  "sentiment" : -0.08,
+                  "categories" : [
+                                  {
+                                  "hierarchy" : "business and industrial / energy / electricity",
+                                  "score" : 0.32
+                                  },
+                                  {
+                                  "hierarchy" : "society / work / unemployment",
+                                  "score" : 0.17
+                                  },
+                                  {
+                                  "hierarchy" : "business and industrial / energy / renewable energy",
+                                  "score" : 0.13
+                                  }
+                                  ],
+                  
+                  "concepts" : [
+                                {
+                                "concept" : "Electrical engineering",
+                                "score" : 0.95
+                                },
+                                {
+                                "concept" : "Rate of return",
+                                "score" : 0.91
+                                },
+                                {
+                                "concept" : "Investment",
+                                "score" : 0.89
+                                ],{
+                  "concept" : "Electrical generator",
+                  "score" : 0.81
+                  ],{
+        "concept" : "Alternating current",
+        "score" : 0.81
+        ],{
+            "concept" : "Mains electricity",
+            "score" : 0.78
+            ],{
+                "concept" : "Net present value",
+                "score" : 0.78
+                ], {
+                    "concept" : "Electro",
+                    "score" : 0.75
+                    ]
+                    
+                    "emotions" : [
+                                  {
+                                  "joy" : 0.07,
+                                  "anger" : 0.23,
+                                  "disgust" : 0.33,
+                                  "sadness" : 0.52,
+                                  "fear" : 0.04
+                                  }
+                                  ],
+                    
+                    "keywords" : [
+                                  {
+                                  "Bipartisan Budget Act" : 0.97,
+                                  "renewable electrical systems" : 0.89,
+                                  "quieter future" : 0.64,
+                                  "tax cuts" : 0.64,
+                                  "tax breaks" : 0.62,
+                                  "special privileges" : 0.61,
+                                  "electricity generation" : 0.59,
+                                  "tax revenue" : 0.57,
+                                  "cost" : 0.39,
+                                  "homeowners" : 0.39,
+                                  "Opponents" : 0.38,
+                                  "Supporters" : 0.36,
+                                  "return" : 0.36,
+                                  "money" : 0.35,
+                                  "industry" : 0.35
+                                  }
+                                  ],
+                    
+                    "entities" : [
+                                  {
+                                  "type" : "30%",
+                                  "name" : "Quantity",
+                                  "score" : 0.56
+                                  }
+                                  ],
+                    
+                    "categories" : [
+                                    {
+                                    "hierarchy" : "business and industrial / energy / electricity",
+                                    "score" : 0.32
+                                    },
+                                    {
+                                    "hierarchy" : "society / work / unemployment",
+                                    "score" : 0.17
+                                    },
+                                    {
+                                    "hierarchy" : "business and industrial / energy / renewable energy",
+                                    "score" : 0.13
+                                    }
+                                    ]
+                }
+                ]
+}

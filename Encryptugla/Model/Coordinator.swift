@@ -15,7 +15,7 @@ class Coordinator {
     static let shared = Coordinator()
     
     var user: FirebaseAuth.User?
-    let nlp: GoogleLanguage = GoogleLanguage()
+    //let nlp: GoogleLanguage = GoogleLanguage()
     let encrypt: Encrypt = Encrypt()
     
     enum ReadJSONError: Error {
@@ -49,5 +49,12 @@ class Coordinator {
             throw ReadJSONError.pathDoesNotExist
         }
         return questions
+    }
+    
+    func readQuestinsNLP(jsonFilePrefix: String = "nlp") throws -> [QuestionAnalysis]? {
+        var analysis = [QuestionAnalysis]()
+        
+        
+        return analysis
     }
 }

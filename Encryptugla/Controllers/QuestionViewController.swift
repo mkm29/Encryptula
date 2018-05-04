@@ -11,7 +11,9 @@ import UIKit
 class QuestionViewController: UIViewController {
     
     var question: Question?
-
+    @IBOutlet weak var navTitle: UINavigationItem!
+    @IBOutlet weak var textView: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -20,11 +22,16 @@ class QuestionViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         if let question = question {
-            print(question.title)
+            navTitle.title = question.title
+            textView.text = question.description
         }
     }
     
-
+    @IBAction func back(_ sender: Any) {
+        // dismiss nav
+        dismiss(animated: true, completion: nil)
+    }
+    
     /*
     // MARK: - Navigation
 

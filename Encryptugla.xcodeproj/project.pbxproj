@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		94DCB563204E1E6D8DA029A5 /* Pods_Encryptugla.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02FB238E2031D5A548FD8307 /* Pods_Encryptugla.framework */; };
+		AF03B02C20993C8B00C00636 /* WatsonCredentials.json in Resources */ = {isa = PBXBuildFile; fileRef = AF03B02B20993C8B00C00636 /* WatsonCredentials.json */; };
+		AF03B02E20993DB900C00636 /* nlp.json in Resources */ = {isa = PBXBuildFile; fileRef = AF03B02D20993DB900C00636 /* nlp.json */; };
+		AF03B0302099ECF600C00636 /* QuestionAnalysis.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF03B02F2099ECF600C00636 /* QuestionAnalysis.swift */; };
 		AF4E211A209604D0005D3DCC /* GoogleLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4E2119209604D0005D3DCC /* GoogleLanguage.swift */; };
 		AF66129D208F97AE00AAE6E7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AF66129C208F97AE00AAE6E7 /* GoogleService-Info.plist */; };
 		AF72CD15208E9C1000940023 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF72CD14208E9C1000940023 /* AppDelegate.swift */; };
@@ -25,15 +28,18 @@
 		AF8E292620980C240024C9F1 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8E292520980C240024C9F1 /* Question.swift */; };
 		AF8E292820981A6D0024C9F1 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8E292720981A6D0024C9F1 /* QuestionViewController.swift */; };
 		AF8F1B72209641D200FD1845 /* GoogleStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8F1B71209641D200FD1845 /* GoogleStructs.swift */; };
-		AFA4A9E92094F93400733ECE /* test.m in Sources */ = {isa = PBXBuildFile; fileRef = AFA4A9E82094F93400733ECE /* test.m */; };
 		AFA4A9EB209501D000733ECE /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA4A9EA209501D000733ECE /* Response.swift */; };
 		AFA4A9ED209501E400733ECE /* Blockchain.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA4A9EC209501E400733ECE /* Blockchain.swift */; };
+		AFB2F1D9209BE8470001AF56 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFB2F1D8209BE8460001AF56 /* Security.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		02FB238E2031D5A548FD8307 /* Pods_Encryptugla.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Encryptugla.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		08B060FD4F0129B01CBF380C /* Pods-Encryptugla.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Encryptugla.release.xcconfig"; path = "Pods/Target Support Files/Pods-Encryptugla/Pods-Encryptugla.release.xcconfig"; sourceTree = "<group>"; };
 		A0EA709387106993D4C5A449 /* Pods-Encryptugla.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Encryptugla.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Encryptugla/Pods-Encryptugla.debug.xcconfig"; sourceTree = "<group>"; };
+		AF03B02B20993C8B00C00636 /* WatsonCredentials.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = WatsonCredentials.json; sourceTree = "<group>"; };
+		AF03B02D20993DB900C00636 /* nlp.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = nlp.json; sourceTree = "<group>"; };
+		AF03B02F2099ECF600C00636 /* QuestionAnalysis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionAnalysis.swift; sourceTree = "<group>"; };
 		AF4E2119209604D0005D3DCC /* GoogleLanguage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleLanguage.swift; sourceTree = "<group>"; };
 		AF66129C208F97AE00AAE6E7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AF66129E208F9A0000AAE6E7 /* Encryptugla.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Encryptugla.entitlements; sourceTree = "<group>"; };
@@ -53,12 +59,12 @@
 		AF8E29232097E1000024C9F1 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		AF8E292520980C240024C9F1 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		AF8E292720981A6D0024C9F1 /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
+		AF8E292B2098212E0024C9F1 /* Encryptugla-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Encryptugla-Bridging-Header.h"; sourceTree = "<group>"; };
 		AF8F1B71209641D200FD1845 /* GoogleStructs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleStructs.swift; sourceTree = "<group>"; };
 		AFA4A9E72094F93400733ECE /* Encryptugla-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Encryptugla-Bridging-Header.h"; sourceTree = "<group>"; };
-		AFA4A9E82094F93400733ECE /* test.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = test.m; sourceTree = "<group>"; };
 		AFA4A9EA209501D000733ECE /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		AFA4A9EC209501E400733ECE /* Blockchain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blockchain.swift; sourceTree = "<group>"; };
-		AFA9932B2095FB72004AD13D /* Encryptugla.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Encryptugla.playground; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		AFB2F1D8209BE8460001AF56 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFB2F1D9209BE8470001AF56 /* Security.framework in Frameworks */,
 				94DCB563204E1E6D8DA029A5 /* Pods_Encryptugla.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -89,6 +96,7 @@
 				AF4E2118209604B8005D3DCC /* Clients */,
 				AF7A090320969937001F6431 /* Coordinator.swift */,
 				AF8E292520980C240024C9F1 /* Question.swift */,
+				AF03B02B20993C8B00C00636 /* WatsonCredentials.json */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -98,6 +106,7 @@
 			children = (
 				AF4E2119209604D0005D3DCC /* GoogleLanguage.swift */,
 				AF8F1B71209641D200FD1845 /* GoogleStructs.swift */,
+				AF03B02F2099ECF600C00636 /* QuestionAnalysis.swift */,
 			);
 			path = Clients;
 			sourceTree = "<group>";
@@ -109,6 +118,7 @@
 				AF72CD12208E9C1000940023 /* Products */,
 				34D5AFFC982F979A33BB602D /* Pods */,
 				CBC4A791184EFE60207EA8A2 /* Frameworks */,
+				AF8E292B2098212E0024C9F1 /* Encryptugla-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,15 +135,11 @@
 			children = (
 				AF66129E208F9A0000AAE6E7 /* Encryptugla.entitlements */,
 				AF7A090520969BF6001F6431 /* Controllers */,
+				AF8E292920981FA90024C9F1 /* Encrypt */,
 				AF4E2117209604B2005D3DCC /* Model */,
 				AF7A090820969DD8001F6431 /* Supporting Files */,
-				AFA9932B2095FB72004AD13D /* Encryptugla.playground */,
 				AF72CD20208E9C1100940023 /* Info.plist */,
 				AF66129C208F97AE00AAE6E7 /* GoogleService-Info.plist */,
-				AF72CD26208E9C2F00940023 /* Encrypt.swift */,
-				AF72CD2A208F61AF00940023 /* Date+Extension.swift */,
-				AFA4A9E82094F93400733ECE /* test.m */,
-				AFA4A9E72094F93400733ECE /* Encryptugla-Bridging-Header.h */,
 			);
 			path = Encryptugla;
 			sourceTree = "<group>";
@@ -153,12 +159,23 @@
 			isa = PBXGroup;
 			children = (
 				AF8E29212097DE4B0024C9F1 /* questions.json */,
+				AF03B02D20993DB900C00636 /* nlp.json */,
 				AF72CD14208E9C1000940023 /* AppDelegate.swift */,
 				AF72CD18208E9C1000940023 /* Main.storyboard */,
 				AF72CD1B208E9C1100940023 /* Assets.xcassets */,
 				AF72CD1D208E9C1100940023 /* LaunchScreen.storyboard */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AF8E292920981FA90024C9F1 /* Encrypt */ = {
+			isa = PBXGroup;
+			children = (
+				AF72CD26208E9C2F00940023 /* Encrypt.swift */,
+				AF72CD2A208F61AF00940023 /* Date+Extension.swift */,
+				AFA4A9E72094F93400733ECE /* Encryptugla-Bridging-Header.h */,
+			);
+			path = Encrypt;
 			sourceTree = "<group>";
 		};
 		AFA4A9EE209501F600733ECE /* Blockchain */ = {
@@ -174,6 +191,7 @@
 		CBC4A791184EFE60207EA8A2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AFB2F1D8209BE8460001AF56 /* Security.framework */,
 				02FB238E2031D5A548FD8307 /* Pods_Encryptugla.framework */,
 			);
 			name = Frameworks;
@@ -252,7 +270,9 @@
 				AF8E29222097DE4B0024C9F1 /* questions.json in Resources */,
 				AF72CD1F208E9C1100940023 /* LaunchScreen.storyboard in Resources */,
 				AF66129D208F97AE00AAE6E7 /* GoogleService-Info.plist in Resources */,
+				AF03B02E20993DB900C00636 /* nlp.json in Resources */,
 				AF72CD1C208E9C1100940023 /* Assets.xcassets in Resources */,
+				AF03B02C20993C8B00C00636 /* WatsonCredentials.json in Resources */,
 				AF72CD1A208E9C1000940023 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -325,9 +345,8 @@
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/RNCryptor/RNCryptor.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
-				"${BUILT_PRODUCTS_DIR}/SimpleKeychain/SimpleKeychain.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${PODS_ROOT}/TwitterCore/iOS/TwitterCore.framework",
 				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
@@ -347,9 +366,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RNCryptor.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SimpleKeychain.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterCore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
@@ -377,6 +395,7 @@
 				AF72CD27208E9C2F00940023 /* Encrypt.swift in Sources */,
 				AF4E211A209604D0005D3DCC /* GoogleLanguage.swift in Sources */,
 				AF8E292620980C240024C9F1 /* Question.swift in Sources */,
+				AF03B0302099ECF600C00636 /* QuestionAnalysis.swift in Sources */,
 				AF8E29242097E1000024C9F1 /* TestViewController.swift in Sources */,
 				AF72CD29208F60D500940023 /* Block.swift in Sources */,
 				AF7A090420969937001F6431 /* Coordinator.swift in Sources */,
@@ -384,7 +403,6 @@
 				AF72CD17208E9C1000940023 /* LoginViewController.swift in Sources */,
 				AF8E292820981A6D0024C9F1 /* QuestionViewController.swift in Sources */,
 				AF72CD15208E9C1000940023 /* AppDelegate.swift in Sources */,
-				AFA4A9E92094F93400733ECE /* test.m in Sources */,
 				AF8F1B72209641D200FD1845 /* GoogleStructs.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -541,7 +559,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = smigula.Encryptugla;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Encryptugla/Encryptugla-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Encryptugla-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -564,7 +582,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = smigula.Encryptugla;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Encryptugla/Encryptugla-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Encryptugla-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

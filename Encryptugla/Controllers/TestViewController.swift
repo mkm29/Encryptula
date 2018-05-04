@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Security
 
 class TestViewController: UIViewController {
 
@@ -14,16 +15,18 @@ class TestViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-        print("Trying to read in JSON")
-        do {
-            if let questions = try coordinator.readQuestionsJSON() {
-                print("Questions: ", questions.count)
-            }
-        } catch let error {
-            print(error)
-        }
+        encryptionTest()
     }
+    
+    func encryptionTest()
+    {
+        let clearTextData = "some clear text to encrypt".data(using:String.Encoding.utf8)!
+        let dictionary = Encrypt.encryptData(clearTextData, withPassword: "123456")
+        let decrypted = Encrypt.decryp(fromDictionary: dictionary, withPassword: "123456")
+        let decryptedString = String(data: decrypted, encoding: String.Encoding.utf8)
+        print("decrypted cleartext result - ", decryptedString ?? "Error: Could not convert data to string")
+    }
+    
+    
 
 }

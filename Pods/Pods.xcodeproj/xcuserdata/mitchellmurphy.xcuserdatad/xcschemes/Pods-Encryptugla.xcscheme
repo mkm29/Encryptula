@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "4F7B7EF77A6F8E2D5E7BC6522CCC06C1"
+               BlueprintIdentifier = "BD92DDC1A6F58BE736C32BCF40063B77"
                BuildableName = "Pods_Encryptugla.framework"
                BlueprintName = "Pods-Encryptugla"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "4F7B7EF77A6F8E2D5E7BC6522CCC06C1"
+            BlueprintIdentifier = "BD92DDC1A6F58BE736C32BCF40063B77"
             BuildableName = "Pods_Encryptugla.framework"
             BlueprintName = "Pods-Encryptugla"
             ReferencedContainer = "container:Pods.xcodeproj">

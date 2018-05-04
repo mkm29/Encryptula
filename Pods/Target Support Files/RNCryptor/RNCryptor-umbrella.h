@@ -10,7 +10,8 @@
 #endif
 #endif
 
+#import "RNCryptor.h"
 
-FOUNDATION_EXPORT double SwiftyJSONVersionNumber;
-FOUNDATION_EXPORT const unsigned char SwiftyJSONVersionString[];
+FOUNDATION_EXPORT double RNCryptorVersionNumber;
+FOUNDATION_EXPORT const unsigned char RNCryptorVersionString[];
 

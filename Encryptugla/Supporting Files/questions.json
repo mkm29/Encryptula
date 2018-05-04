@@ -1,112 +1,105 @@
 {
     "questions" : [
                    {
-                   "question_id" : "2",
+                   "question_id" : "1",
                    "affirmative" : "Asking teachers to contribute to their own retirement makes me feel",
                    "negative" : "Keeping the teachers' defined benefit pension makes me feel",
                    "title" : "Privatizing Teacher Retirement Benefits",
                    "description" : "The financial crisis of 2008 hit many states hard, especially Kentucky. Since then, Kentucky has faced a large state deficit. It currently provides its public school teachers a retirement pension based on years of service, but the expense continues the deficit spending. Supporters of new legislation suggest teachers be required to shoulder some of the cost by contributing, similar to private sector employees. Opponents say changes in the law are broken promises and our teachers deserve more."
                    },
                    {
-                   "question_id" : "3",
+                   "question_id" : "2",
                    "title" : "Federal Restrictions on Self-Driving Tech",
                    "affirmative" : "Federal regulations on tests and transparency makes me feel",
                    "negative" : "Leaving regulations to be decided by each state makes me feel",
                    "description" : "Many companies are racing to develop truly self-driving car technology. Some companies have been in development for nearly 10 years, while others are newer. Recently, a pedestrian was killed by a self-driving car while crossing the road at night. Some have since called for nationwide restrictions on self-driving tests and transparency in test data, citing safety concerns. Others fear additional regulations will impede innovation and prefer states individually decide."
                    },
                    {
+                   "question_id" : "3",
+                   "title" : "Renewable Energy Tax Credits",
+                   "affirmative" : "Offering Tax Breaks to encourage renewable energy makes me feel",
+                   "negative" : "Removing the breaks and cost to tax revenue would make me feel",
+                   "description" : "The Bipartisan Budget Act of 2018 continued to allocate money for tax breaks offsetting the cost of homeowners installing renewable electrical systems. The tax cuts start at 30% of an installed system cost and decreases over several years. Supporters say these cuts are essential to promote a cleaner, quieter future of electricity generation. Opponents say the special privileges are losing tax revenue catering to an industry that cannot provide its own return on investment."
+                   },
+                   {
                    "question_id" : "4",
-                   "title" : "Renewable Energy Tax Credits",
-                   "affirmative" : "Offering Tax Breaks to encourage renewable energy makes me feel",
-                   "negative" : "Removing the breaks and cost to tax revenue would make me feel",
-                   "description" : "The Bipartisan Budget Act of 2018 continued to allocate money for tax breaks offsetting the cost of homeowners installing renewable electrical systems. The tax cuts start at 30% of an installed system cost and decreases over several years. Supporters say these cuts are essential to promote a cleaner, quieter future of electricity generation. Opponents say the special privileges are losing tax revenue catering to an industry that cannot provide its own return on investment."
-                   },
-                   {
-                   "question_id" : "5",
-                   "title" : "Renewable Energy Tax Credits",
-                   "affirmative" : "Offering Tax Breaks to encourage renewable energy makes me feel",
-                   "negative" : "Removing the breaks and cost to tax revenue would make me feel",
-                   "description" : "The Bipartisan Budget Act of 2018 continued to allocate money for tax breaks offsetting the cost of homeowners installing renewable electrical systems. The tax cuts start at 30% of an installed system cost and decreases over several years. Supporters say these cuts are essential to promote a cleaner, quieter future of electricity generation. Opponents say the special privileges are losing tax revenue catering to an industry that cannot provide its own return on investment."
-                   },
-                   {
-                   "question_id" : "6",
                    "title" : "Changing DACA - Deferred Action for Childhood Arrivals",
                    "affirmative" : "Allowing DACA children to stay in the US makes me feel",
                    "negative" : "Removing DACA to strictly enforce immigration law makes me feel",
                    "description" : "The US represents freedom and opportunity for people around the world. This attracts needy families to come without formal permission. DACA defers deportation of children brought illegally by their parents for 2 year periods after meeting several important qualifications. Supporters affirm the children must be law abiding citizens and claim the US is their home. Opponents say this law encourages more families to break the law and come illegally, adding strain to citizen resources."
                    },
                    {
-                   "question_id" : "7",
+                   "question_id" : "5",
                    "title" : "Privatized Partnerships for Roads & Bridges",
                    "affirmative" : "Allowing private companies to own roadways makes me feel",
                    "negative" : "Preventing private companies to own roadways makes me feel",
                    "description" : "Aging infrastructure is a widespread issue in America. Bridges are particularly susceptible to age and wear. Recent proposals have suggested that private corporations should be allowed to invest in new infrastructure and charge tolls to recoup a return. Supporters say this capitalism will quicken infrastructure improvement and alleviate costs from state budgets. Opponents fear the added costs to drivers and the profiting from previously public roadways."
                    },
                    {
-                   "question_id" : "8",
+                   "question_id" : "6",
                    "title" : "Gun Control - Requiring Licenses",
                    "affirmative" : "Requiring a license to own a gun would make me feel",
                    "negative" : "Forbiding gun licensing makes me feel",
                    "description" : "Gun violence continues to be an issue in the US. As the number of violent gun crimes climbs, in combination with recent mass shooting events at schools, some have called for tighter gun regulation. One proposal is requiring the registration of a gun owner through a licensing process. Supporters suggest a licensure process could prevent those with criminal pasts or mental illness from acquiring guns. Opponents claim the idea violates the 2nd Amendment."
                    },
                    {
-                   "question_id" : "9",
+                   "question_id" : "7",
                    "title" : "Air Strikes on Syrian Military Targets",
                    "affirmative" : "US sending strikes on suspected Syrian chemical sites make me feel",
                    "negative" : "If the US kept out of the conflict, I would feel",
                    "description" : "The Syrian civil war has lasted for 8 years. During that time, the existing regime has allegedly used chemical weapons on fighters and civilians. While many international organizations claim these attacks are proven, Syria and its allies--Russia and Iran--deny the accusations. In response to the latest chemical attack evidence, the US sent targeted military strikes on Syrian sites. Supporters decry the horror of chemical attacks while opponents prefer to keep out of another conflict."
                    },
                    {
-                   "question_id" : "10",
+                   "question_id" : "8",
                    "title" : "Texas Voting District Gerrymandering",
                    "affirmative" : "Allowing states to redraw voting districts makes me feel",
                    "negative" : "Restricting the redrawing of districts would make me feel",
                    "description" : "Gerrymandering refers to a deliberate change of voting districts for a political party's gain. The US Supreme Court is hearing a case claiming the redrawing of Texas Districts 27 and 35 was discriminatory against minorities. When redrawn, the minority populations had a smaller voting percentage than before. Supporters claim it is a state right and thus a state issue. Opponents claim gerrymandering intentionally lessens those citizens' impact in elections and their 14th Amendment rights."
                    },
                    {
-                   "question_id" : "11",
+                   "question_id" : "9",
                    "title" : "North Korean Peace Talks",
                    "affirmative" : "Negotiating peace with North Korea makes me feel",
                    "negative" : "Continuing to view North Korea as a state enemy makes me feel",
                    "description" : "North and South Korea (and the US) have been at war since 1950, even though much of the time has been under a tentative cease-fire. North Korea has continued to develop nuclear weapons against diplomatic sanctions and threats between the US and North Korea have recently intensified. Supporters of North Korea peace want stability and a path forward. Opponents fear North Korean leadership cannot be trusted and US must maintain defenses against it."
                    },
                    {
-                   "question_id" : "12",
+                   "question_id" : "10",
                    "title" : "'Citizens United' Impact on American Elections",
                    "affirmative" : "Protecting organizations' political agendas makes me feel ",
                    "negative" : "Removing organizations' inclusion from the 1st Amendment makes me feel",
                    "description" : "'Citizens United v. FEC' was a 5-4 US Supreme Court decision giving organizations (for-profit, non-profit, etc) equal protection under the 1st Amendment's freedom of speech as any citizen. In essence, this allows organizations to sponsor and air political ads at any time and at any cost. Supporters of the verdict claim organizations have every right to protect their political interests as their employees. Opponents claim the wealthiest orgs now have unfair impacts on elections and politicians."
                    },
                    {
-                   "question_id" : "13",
+                   "question_id" : "11",
                    "title" : "Sanctuary Cities and Federal Support",
                    "affirmative" : "Leaving Immigration enforcement to a city makes me feel",
                    "negative" : "Requiring a city to abide by national immigration law makes me feel",
                    "description" : "Sanctuary City is a term designating a city that refuses to report discovered illegal immigrants to federal agencies. Typically, a city will discover a person is an illegal alien during a police event--from violent crime to minor traffic offenses--but this is not always the case. Supporters of these cities claim the harm strict deportation has on families and communities. Opponents worry allowing cities to openly oppose federal law is a bad precedent and suggest stopping their federal funding."
                    },
                    {
-                   "question_id" : "14",
+                   "question_id" : "12",
                    "title" : "Legalizing Recreational Marijuana",
                    "affirmative" : "Legalizing marijuana for recreational use makes me feel",
                    "negative" : "Restricting marijuana to lower use (illegal or medical) makes me feel",
                    "description" : "In 2012, Colorado and Washington State independently voted to make the recreational use of marijuana legal. While legal recreational use directly contradicts federal law, 6 more states have since made \"weed\" legal. Supporters of legal usage cite the added tax revenue from sales, the smoker safety of having quality policies, and claim alcohol use is more dangerous. Opponents claim weed is a gateway to other drugs and fear the impacts it may have on driver safety and workforce employability."
                    },
                    {
-                   "question_id" : "15",
+                   "question_id" : "13",
                    "title" : "Repealing New Hampshire's Death Penalty",
                    "affirmative" : "Repealing the death penalty option makes me feel",
                    "negative" : "Keeping the death penalty option makes me feel",
                    "description" : "The New Hampshire Legislature has passed a provision removing \"may be punished by death\" from its capital punishment statute and replacing it with a life term without parole. While the Governor currently opposes the measure, New Hampshire could become the 20th state to have no death penalty. Supporters of repeal claim death penalties do not deter crime, are more expensive than life sentences, and disproportionately affect minorities. Opponents tout studies refuting many of those claims."
                    },
                    {
-                   "question_id" : "16",
+                   "question_id" : "14",
                    "title" : "Automatically Restoring Voting Rights for Felons",
                    "affirmative" : "Automatically restoring ex-convict voting rights makes me feel",
                    "negative" : "Continuing to require ex-convicts to earn back the right makes me feel",
                    "description" : "Florida citizens will be voting on a resolution to automatically restore voting rights to most felons upon release, except those convicted of murder or sexual crimes. Currently, 33 states have longer processes to earn the right again. Supporters say this \"re-enfranchisement\" is critical to restoring ex-convicts's rights and acclimate them back into society. Opponents suggest longer processes to regain voting rights are incentives to behave and prevent reincarceration."
                    },
                    {
-                   "question_id" : "17",
+                   "question_id" : "15",
                    "title" : "The Use of Demographic Data by Social Platforms",
                    "affirmative" : "Using info I post--to tailor content specific to me--makes me feel",
                    "negative" : "Restricting an app's ability to personalize would make me feel",
