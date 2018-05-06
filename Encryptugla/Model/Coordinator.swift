@@ -14,13 +14,20 @@ class Coordinator {
     
     static let shared = Coordinator()
     
+    // unique identifier for the current device. Used to create AES key
+    var udid: String? = ""
+    
     var user: FirebaseAuth.User?
-    //let nlp: GoogleLanguage = GoogleLanguage()
     let encrypt: Encrypt = Encrypt()
+    let firebase: FirebaseClient = FirebaseClient.shared
     
     enum ReadJSONError: Error {
         case pathDoesNotExist
         case unableToConvertToJSON
+    }
+    
+    func getUDID() {
+        self.udid = UIDevice.current.identifierForVendor!.uuidString
     }
     
     func readQuestionsJSON(jsonFilePrefix: String = "questions") throws -> [Question]? {

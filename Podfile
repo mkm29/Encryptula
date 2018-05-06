@@ -10,6 +10,6 @@ target 'Encryptugla' do
 #  pod "SwiftyJSON"
   pod 'Firebase/Auth'
   pod 'FirebaseUI', '~> 4.0' 
-  pod 'RNCryptor'
+#  pod 'RNCryptor'
 
 end

@@ -9,17 +9,20 @@
 import UIKit
 import Firebase
 import FirebaseAuthUI
+import FirebaseDatabase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    override init() {
+        super.init()
+        FirebaseApp.configure()
+    }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        //FirebaseApp.configure()
-        
         // look for stored encryption keys
 
         return true

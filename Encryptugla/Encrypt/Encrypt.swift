@@ -10,140 +10,104 @@ import Foundation
 import Security
 
 class Encrypt {
-
-    class func encryptData(_ clearTextData : Data, withPassword password : String) -> Dictionary<String, Data>
-    {
-        var setupSuccess = true
-        var outDictionary = Dictionary<String, Data>.init()
-        var key = Data(repeating:0, count:kCCKeySizeAES256)
-        var salt = Data(count: 8)
-        salt.withUnsafeMutableBytes { (saltBytes: UnsafeMutablePointer<UInt8>) -> Void in
-            let saltStatus = SecRandomCopyBytes(kSecRandomDefault, salt.count, saltBytes)
-            if saltStatus == errSecSuccess
-            {
-                let passwordData = password.data(using:String.Encoding.utf8)!
-                key.withUnsafeMutableBytes { (keyBytes : UnsafeMutablePointer<UInt8>) in
-                    let derivationStatus = CCKeyDerivationPBKDF(CCPBKDFAlgorithm(kCCPBKDF2), password, passwordData.count, saltBytes, salt.count, CCPseudoRandomAlgorithm(kCCPRFHmacAlgSHA512), 14271, keyBytes, key.count)
-                    if derivationStatus != Int32(kCCSuccess)
-                    {
-                        setupSuccess = false
-                    }
-                }
-            }
-            else
-            {
-                setupSuccess = false
-            }
-        }
-        
-        var iv = Data.init(count: kCCBlockSizeAES128)
-        iv.withUnsafeMutableBytes { (ivBytes : UnsafeMutablePointer<UInt8>) in
-            let ivStatus = SecRandomCopyBytes(kSecRandomDefault, kCCBlockSizeAES128, ivBytes)
-            if ivStatus != errSecSuccess
-            {
-                setupSuccess = false
-            }
-        }
-        
-        if (setupSuccess)
-        {
-            var numberOfBytesEncrypted : size_t = 0
-            let size = clearTextData.count + kCCBlockSizeAES128
-            var encrypted = Data.init(count: size)
-            let cryptStatus = iv.withUnsafeBytes {ivBytes in
-                encrypted.withUnsafeMutableBytes {encryptedBytes in
-                    clearTextData.withUnsafeBytes {clearTextBytes in
-                        key.withUnsafeBytes {keyBytes in
-                            CCCrypt(CCOperation(kCCEncrypt),
-                                    CCAlgorithm(kCCAlgorithmAES),
-                                    CCOptions(kCCOptionPKCS7Padding + kCCModeCBC),
-                                    keyBytes,
-                                    key.count,
-                                    ivBytes,
-                                    clearTextBytes,
-                                    clearTextData.count,
-                                    encryptedBytes,
-                                    size,
-                                    &numberOfBytesEncrypted)
-                        }
-                    }
-                }
-            }
-            if cryptStatus == Int32(kCCSuccess)
-            {
-                encrypted.count = numberOfBytesEncrypted
-                outDictionary["EncryptionData"] = encrypted
-                outDictionary["EncryptionIV"] = iv
-                outDictionary["EncryptionSalt"] = salt
-            }
-        }
-        
-        return outDictionary;
+    
+    private var certificate: SecCertificate?
+    private var publicKey: SecKey?
+    private let algorithm: SecKeyAlgorithm = SecKeyAlgorithm.rsaEncryptionOAEPSHA512AESGCM
+    
+    var setupStatus: Bool = false
+    
+    enum EncryptionError: Error {
+        case algorithmNotSupported
+        case textLengthTooSmall
     }
     
-    class func decryp(fromDictionary dictionary : Dictionary<String, Data>, withPassword password : String) -> Data
-    {
-        var setupSuccess = true
-        let encrypted = dictionary["EncryptionData"]
-        let iv = dictionary["EncryptionIV"]
-        let salt = dictionary["EncryptionSalt"]
-        var key = Data(repeating:0, count:kCCKeySizeAES256)
-        salt?.withUnsafeBytes { (saltBytes: UnsafePointer<UInt8>) -> Void in
-            let passwordData = password.data(using:String.Encoding.utf8)!
-            key.withUnsafeMutableBytes { (keyBytes : UnsafeMutablePointer<UInt8>) in
-                let derivationStatus = CCKeyDerivationPBKDF(CCPBKDFAlgorithm(kCCPBKDF2), password, passwordData.count, saltBytes, salt!.count, CCPseudoRandomAlgorithm(kCCPRFHmacAlgSHA512), 14271, keyBytes, key.count)
-                if derivationStatus != Int32(kCCSuccess)
-                {
-                    setupSuccess = false
-                }
+    init() {
+        if let certificate = getCertificate() {
+            if let publicKey = getPublicKeyFromCertificate(certificate: certificate) {
+                self.publicKey = publicKey
+                setupStatus = true
+                // test algorith to encrypt/decrypt
+                //testEncryption()
             }
         }
-        
-        var decryptSuccess = false
-        let size = (encrypted?.count)! + kCCBlockSizeAES128
-        var clearTextData = Data.init(count: size)
-        if (setupSuccess)
-        {
-            var numberOfBytesDecrypted : size_t = 0
-            let cryptStatus = iv?.withUnsafeBytes {ivBytes in
-                clearTextData.withUnsafeMutableBytes {clearTextBytes in
-                    encrypted?.withUnsafeBytes {encryptedBytes in
-                        key.withUnsafeBytes {keyBytes in
-                            CCCrypt(CCOperation(kCCDecrypt),
-                                    CCAlgorithm(kCCAlgorithmAES128),
-                                    CCOptions(kCCOptionPKCS7Padding + kCCModeCBC),
-                                    keyBytes,
-                                    key.count,
-                                    ivBytes,
-                                    encryptedBytes,
-                                    (encrypted?.count)!,
-                                    clearTextBytes,
-                                    size,
-                                    &numberOfBytesDecrypted)
-                        }
+    }
+    
+    func testEncryption() {
+        let textToEncrypt = "Mitchell Murphy"
+        print("Encrypt this text: ", textToEncrypt)
+        // 1. get cipher text
+        do {
+            if let cipherText = try encrypt(plainText: textToEncrypt) {
+                print("encrypted text! cipher: ", cipherText)
+                // 2. now lets decrypt this cipher!
+                do {
+                    if let plainText = try decrypt(cipherText: cipherText) {
+                        print("decrypted text! plainText: ", plainText)
                     }
+                } catch {
+                    print(error)
                 }
             }
-            if cryptStatus! == Int32(kCCSuccess)
-            {
-                clearTextData.count = numberOfBytesDecrypted
-                decryptSuccess = true
-            }
+        } catch {
+            print(error)
         }
+  
         
-        return decryptSuccess ? clearTextData : Data.init(count: 0)
     }
     
-    class func SHA256(data: Data) -> String {
-        var digest: Data = Data(count: Int(CC_SHA256_DIGEST_LENGTH))
-        
-        _ = digest.withUnsafeMutableBytes { (digestBytes) in
-            data.withUnsafeBytes { (stringBytes) in
-                CC_SHA256(stringBytes, CC_LONG(data.count), digestBytes)
-            }
+    private func getCertificate() -> SecCertificate? {
+        guard let url = Bundle.main.url(forResource: "certificate", withExtension: "der"),
+            let data = NSData(contentsOf: url),
+            let certificate = SecCertificateCreateWithData(kCFAllocatorDefault, data) else {
+            print("Could not read certificate")
+            return nil
         }
-        return digest.map { String(format: "%02hhx", $0) }.joined()
+        return certificate
     }
     
+    private func getPublicKeyFromCertificate(certificate: SecCertificate) -> SecKey? {
+        // 1
+        //guard let certRef = readCertificate() else { return nil }
+        // 2
+        var secTrust: SecTrust?
+        let secTrustStatus = SecTrustCreateWithCertificates(certificate, nil, &secTrust)
+        if secTrustStatus != errSecSuccess { return nil }
+        // 3
+        var resultType: SecTrustResultType = SecTrustResultType(rawValue: UInt32(0))! // ignore results.
+        let evaluateStatus = SecTrustEvaluate(secTrust!, &resultType)
+        if evaluateStatus != errSecSuccess { return nil }
+        // 4
+        let publicKeyRef = SecTrustCopyPublicKey(secTrust!)
+        return publicKeyRef
+    }
     
+    // Input: a string you wish to encrypt using the loaded public key
+    // Output: a base 64 encoded cipher text
+    func encrypt(plainText: String) throws -> String? {
+        if let publicKey = self.publicKey {
+            let textData = NSData(data: plainText.data(using: .utf8)!)
+            var error: Unmanaged<CFError>?
+            guard let cipherText = SecKeyCreateEncryptedData(publicKey, self.algorithm, textData as CFData,  &error) as Data? else {
+                throw error!.takeRetainedValue() as Error
+            }
+            return cipherText.base64EncodedString()
+        }
+        return nil
+    }
+    
+    // Input: a base 64 encoded cipher text
+    // Output: plain text, decrypted string
+    func decrypt(cipherText: String) throws -> String? {
+        if let publicKey = self.publicKey {
+            let cipherTextData = NSData(data: cipherText.data(using: .utf8)!)
+            var error: Unmanaged<CFError>?
+            guard let plainText = SecKeyCreateDecryptedData(publicKey, self.algorithm, cipherTextData as CFData, &error) as Data? else {
+                throw error!.takeRetainedValue() as Error
+            }
+            return plainText.base64EncodedString()
+        }
+        return nil
+    }
+ 
 }

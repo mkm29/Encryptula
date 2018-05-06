@@ -13,6 +13,7 @@
 		AF03B0302099ECF600C00636 /* QuestionAnalysis.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF03B02F2099ECF600C00636 /* QuestionAnalysis.swift */; };
 		AF4E211A209604D0005D3DCC /* GoogleLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4E2119209604D0005D3DCC /* GoogleLanguage.swift */; };
 		AF66129D208F97AE00AAE6E7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AF66129C208F97AE00AAE6E7 /* GoogleService-Info.plist */; };
+		AF70B270209F6AAD003C8E02 /* FirebaseClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF70B26F209F6AAD003C8E02 /* FirebaseClient.swift */; };
 		AF72CD15208E9C1000940023 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF72CD14208E9C1000940023 /* AppDelegate.swift */; };
 		AF72CD17208E9C1000940023 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF72CD16208E9C1000940023 /* LoginViewController.swift */; };
 		AF72CD1A208E9C1000940023 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF72CD18208E9C1000940023 /* Main.storyboard */; };
@@ -31,6 +32,9 @@
 		AFA4A9EB209501D000733ECE /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA4A9EA209501D000733ECE /* Response.swift */; };
 		AFA4A9ED209501E400733ECE /* Blockchain.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA4A9EC209501E400733ECE /* Blockchain.swift */; };
 		AFB2F1D9209BE8470001AF56 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFB2F1D8209BE8460001AF56 /* Security.framework */; };
+		AFC6FCBB209E71B2008AA891 /* certificate.pem in Resources */ = {isa = PBXBuildFile; fileRef = AFC6FCBA209E71B2008AA891 /* certificate.pem */; };
+		AFC6FCBD209E8029008AA891 /* certificate.der in Resources */ = {isa = PBXBuildFile; fileRef = AFC6FCBC209E731A008AA891 /* certificate.der */; };
+		AFEB8AE9209E13DB00D62F0F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEB8AE8209E13DB00D62F0F /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +47,7 @@
 		AF4E2119209604D0005D3DCC /* GoogleLanguage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleLanguage.swift; sourceTree = "<group>"; };
 		AF66129C208F97AE00AAE6E7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AF66129E208F9A0000AAE6E7 /* Encryptugla.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Encryptugla.entitlements; sourceTree = "<group>"; };
+		AF70B26F209F6AAD003C8E02 /* FirebaseClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseClient.swift; sourceTree = "<group>"; };
 		AF72CD11208E9C1000940023 /* Encryptugla.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Encryptugla.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF72CD14208E9C1000940023 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF72CD16208E9C1000940023 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -65,6 +70,9 @@
 		AFA4A9EA209501D000733ECE /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		AFA4A9EC209501E400733ECE /* Blockchain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blockchain.swift; sourceTree = "<group>"; };
 		AFB2F1D8209BE8460001AF56 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		AFC6FCBA209E71B2008AA891 /* certificate.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = certificate.pem; sourceTree = "<group>"; };
+		AFC6FCBC209E731A008AA891 /* certificate.der */ = {isa = PBXFileReference; lastKnownFileType = file; path = certificate.der; sourceTree = "<group>"; };
+		AFEB8AE8209E13DB00D62F0F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +105,7 @@
 				AF7A090320969937001F6431 /* Coordinator.swift */,
 				AF8E292520980C240024C9F1 /* Question.swift */,
 				AF03B02B20993C8B00C00636 /* WatsonCredentials.json */,
+				AFEB8AE8209E13DB00D62F0F /* Constants.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -104,11 +113,28 @@
 		AF4E2118209604B8005D3DCC /* Clients */ = {
 			isa = PBXGroup;
 			children = (
-				AF4E2119209604D0005D3DCC /* GoogleLanguage.swift */,
-				AF8F1B71209641D200FD1845 /* GoogleStructs.swift */,
+				AF70B26E209F6A33003C8E02 /* Firebase */,
+				AF70B26D209F6A28003C8E02 /* Google */,
 				AF03B02F2099ECF600C00636 /* QuestionAnalysis.swift */,
 			);
 			path = Clients;
+			sourceTree = "<group>";
+		};
+		AF70B26D209F6A28003C8E02 /* Google */ = {
+			isa = PBXGroup;
+			children = (
+				AF4E2119209604D0005D3DCC /* GoogleLanguage.swift */,
+				AF8F1B71209641D200FD1845 /* GoogleStructs.swift */,
+			);
+			path = Google;
+			sourceTree = "<group>";
+		};
+		AF70B26E209F6A33003C8E02 /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				AF70B26F209F6AAD003C8E02 /* FirebaseClient.swift */,
+			);
+			path = Firebase;
 			sourceTree = "<group>";
 		};
 		AF72CD08208E9C1000940023 = {
@@ -158,9 +184,11 @@
 		AF7A090820969DD8001F6431 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				AF72CD14208E9C1000940023 /* AppDelegate.swift */,
+				AFC6FCBA209E71B2008AA891 /* certificate.pem */,
+				AFC6FCBC209E731A008AA891 /* certificate.der */,
 				AF8E29212097DE4B0024C9F1 /* questions.json */,
 				AF03B02D20993DB900C00636 /* nlp.json */,
-				AF72CD14208E9C1000940023 /* AppDelegate.swift */,
 				AF72CD18208E9C1000940023 /* Main.storyboard */,
 				AF72CD1B208E9C1100940023 /* Assets.xcassets */,
 				AF72CD1D208E9C1100940023 /* LaunchScreen.storyboard */,
@@ -269,7 +297,9 @@
 			files = (
 				AF8E29222097DE4B0024C9F1 /* questions.json in Resources */,
 				AF72CD1F208E9C1100940023 /* LaunchScreen.storyboard in Resources */,
+				AFC6FCBB209E71B2008AA891 /* certificate.pem in Resources */,
 				AF66129D208F97AE00AAE6E7 /* GoogleService-Info.plist in Resources */,
+				AFC6FCBD209E8029008AA891 /* certificate.der in Resources */,
 				AF03B02E20993DB900C00636 /* nlp.json in Resources */,
 				AF72CD1C208E9C1100940023 /* Assets.xcassets in Resources */,
 				AF03B02C20993C8B00C00636 /* WatsonCredentials.json in Resources */,
@@ -345,7 +375,6 @@
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
-				"${BUILT_PRODUCTS_DIR}/RNCryptor/RNCryptor.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${PODS_ROOT}/TwitterCore/iOS/TwitterCore.framework",
 				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework",
@@ -366,7 +395,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RNCryptor.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterCore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterKit.framework",
@@ -396,9 +424,11 @@
 				AF4E211A209604D0005D3DCC /* GoogleLanguage.swift in Sources */,
 				AF8E292620980C240024C9F1 /* Question.swift in Sources */,
 				AF03B0302099ECF600C00636 /* QuestionAnalysis.swift in Sources */,
+				AFEB8AE9209E13DB00D62F0F /* Constants.swift in Sources */,
 				AF8E29242097E1000024C9F1 /* TestViewController.swift in Sources */,
 				AF72CD29208F60D500940023 /* Block.swift in Sources */,
 				AF7A090420969937001F6431 /* Coordinator.swift in Sources */,
+				AF70B270209F6AAD003C8E02 /* FirebaseClient.swift in Sources */,
 				AF7A090720969C1E001F6431 /* QuestionsTableViewController.swift in Sources */,
 				AF72CD17208E9C1000940023 /* LoginViewController.swift in Sources */,
 				AF8E292820981A6D0024C9F1 /* QuestionViewController.swift in Sources */,

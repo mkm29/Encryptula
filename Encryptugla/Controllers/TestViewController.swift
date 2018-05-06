@@ -15,17 +15,20 @@ class TestViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        encryptionTest()
+        //let udid = UIDevice.current.identifierForVendor!.uuidString
+        
+        print("-----------------------------")
+        coordinator.firebase.getAllUsers()
     }
     
-    func encryptionTest()
-    {
-        let clearTextData = "some clear text to encrypt".data(using:String.Encoding.utf8)!
-        let dictionary = Encrypt.encryptData(clearTextData, withPassword: "123456")
-        let decrypted = Encrypt.decryp(fromDictionary: dictionary, withPassword: "123456")
-        let decryptedString = String(data: decrypted, encoding: String.Encoding.utf8)
-        print("decrypted cleartext result - ", decryptedString ?? "Error: Could not convert data to string")
-    }
+//    func encryptionTest()
+//    {
+//        let clearTextData = "some clear text to encrypt".data(using:String.Encoding.utf8)!
+//        let dictionary = Encrypt.encryptData(clearTextData, withPassword: "123456")
+//        let decrypted = Encrypt.decryp(fromDictionary: dictionary, withPassword: "123456")
+//        let decryptedString = String(data: decrypted, encoding: String.Encoding.utf8)
+//        print("decrypted cleartext result - ", decryptedString ?? "Error: Could not convert data to string")
+//    }
     
     
 
