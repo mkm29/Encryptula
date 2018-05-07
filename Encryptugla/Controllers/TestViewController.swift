@@ -18,7 +18,7 @@ class TestViewController: UIViewController {
         //let udid = UIDevice.current.identifierForVendor!.uuidString
         
         print("-----------------------------")
-        coordinator.firebase.getAllUsers()
+        coordinator.getUsers()
     }
     
 //    func encryptionTest()

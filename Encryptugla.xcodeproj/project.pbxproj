@@ -14,6 +14,7 @@
 		AF4E211A209604D0005D3DCC /* GoogleLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4E2119209604D0005D3DCC /* GoogleLanguage.swift */; };
 		AF66129D208F97AE00AAE6E7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AF66129C208F97AE00AAE6E7 /* GoogleService-Info.plist */; };
 		AF70B270209F6AAD003C8E02 /* FirebaseClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF70B26F209F6AAD003C8E02 /* FirebaseClient.swift */; };
+		AF70B272209F911F003C8E02 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF70B271209F911F003C8E02 /* User.swift */; };
 		AF72CD15208E9C1000940023 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF72CD14208E9C1000940023 /* AppDelegate.swift */; };
 		AF72CD17208E9C1000940023 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF72CD16208E9C1000940023 /* LoginViewController.swift */; };
 		AF72CD1A208E9C1000940023 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF72CD18208E9C1000940023 /* Main.storyboard */; };
@@ -48,6 +49,7 @@
 		AF66129C208F97AE00AAE6E7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AF66129E208F9A0000AAE6E7 /* Encryptugla.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Encryptugla.entitlements; sourceTree = "<group>"; };
 		AF70B26F209F6AAD003C8E02 /* FirebaseClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseClient.swift; sourceTree = "<group>"; };
+		AF70B271209F911F003C8E02 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		AF72CD11208E9C1000940023 /* Encryptugla.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Encryptugla.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF72CD14208E9C1000940023 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF72CD16208E9C1000940023 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				AF8E292520980C240024C9F1 /* Question.swift */,
 				AF03B02B20993C8B00C00636 /* WatsonCredentials.json */,
 				AFEB8AE8209E13DB00D62F0F /* Constants.swift */,
+				AF70B271209F911F003C8E02 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -431,6 +434,7 @@
 				AF70B270209F6AAD003C8E02 /* FirebaseClient.swift in Sources */,
 				AF7A090720969C1E001F6431 /* QuestionsTableViewController.swift in Sources */,
 				AF72CD17208E9C1000940023 /* LoginViewController.swift in Sources */,
+				AF70B272209F911F003C8E02 /* User.swift in Sources */,
 				AF8E292820981A6D0024C9F1 /* QuestionViewController.swift in Sources */,
 				AF72CD15208E9C1000940023 /* AppDelegate.swift in Sources */,
 				AF8F1B72209641D200FD1845 /* GoogleStructs.swift in Sources */,

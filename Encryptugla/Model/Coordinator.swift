@@ -16,6 +16,7 @@ class Coordinator {
     
     // unique identifier for the current device. Used to create AES key
     var udid: String? = ""
+    var users: [User] = [User]()
     
     var user: FirebaseAuth.User?
     let encrypt: Encrypt = Encrypt()
@@ -28,6 +29,19 @@ class Coordinator {
     
     func getUDID() {
         self.udid = UIDevice.current.identifierForVendor!.uuidString
+    }
+    
+    func getUsers() {
+        firebase.getAllUsers { (error, users) in
+            guard error == nil else {
+                print(error?.localizedDescription as Any)
+                return
+            }
+            if let users = users {
+                print("Got \(users.count) users")
+                self.users = users
+            }
+        }
     }
     
     func readQuestionsJSON(jsonFilePrefix: String = "questions") throws -> [Question]? {
