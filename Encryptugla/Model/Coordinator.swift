@@ -9,16 +9,15 @@
 import Firebase
 import FirebaseAuth
 
-
 class Coordinator {
     
     static let shared = Coordinator()
     
     // unique identifier for the current device. Used to create AES key
-    var udid: String? = ""
     var users: [User] = [User]()
-    
-    var user: FirebaseAuth.User?
+    // need a mapping between firebase User and User (mine)
+    var currentUser: User? = nil
+    var firebaseUser: FirebaseAuth.User?
     let encrypt: Encrypt = Encrypt()
     let firebase: FirebaseClient = FirebaseClient.shared
     
@@ -27,22 +26,24 @@ class Coordinator {
         case unableToConvertToJSON
     }
     
-    func getUDID() {
-        self.udid = UIDevice.current.identifierForVendor!.uuidString
+    func getUDID() -> String {
+        return UIDevice.current.identifierForVendor!.uuidString
     }
-    
-    func getUsers() {
-        firebase.getAllUsers { (error, users) in
-            guard error == nil else {
-                print(error?.localizedDescription as Any)
-                return
-            }
-            if let users = users {
-                print("Got \(users.count) users")
-                self.users = users
-            }
-        }
-    }
+
+
+    // the following function is redundant
+//    func getUsers() {
+//        firebase.getAllUsers { (error, users) in
+//            guard error == nil else {
+//                print(error?.localizedDescription as Any)
+//                return
+//            }
+//            if let users = users {
+//                print("Got \(users.count) users")
+//                self.users = users
+//            }
+//        }
+//    }
     
     func readQuestionsJSON(jsonFilePrefix: String = "questions") throws -> [Question]? {
         var questions: [Question] = [Question]()
@@ -70,12 +71,5 @@ class Coordinator {
             throw ReadJSONError.pathDoesNotExist
         }
         return questions
-    }
-    
-    func readQuestinsNLP(jsonFilePrefix: String = "nlp") throws -> [QuestionAnalysis]? {
-        var analysis = [QuestionAnalysis]()
-        
-        
-        return analysis
     }
 }

@@ -139,6 +139,9 @@ PODS:
   - SDWebImage (4.2.3):
     - SDWebImage/Core (= 4.2.3)
   - SDWebImage/Core (4.2.3)
+  - SwiftyRSA (1.3.0):
+    - SwiftyRSA/ObjC (= 1.3.0)
+  - SwiftyRSA/ObjC (1.3.0)
   - TwitterCore (3.1.0)
   - TwitterKit (3.3.0):
     - TwitterCore (>= 3.1.0)
@@ -146,6 +149,7 @@ PODS:
 DEPENDENCIES:
   - Firebase/Auth
   - FirebaseUI (~> 4.0)
+  - SwiftyRSA
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -174,6 +178,7 @@ SPEC REPOS:
     - nanopb
     - Protobuf
     - SDWebImage
+    - SwiftyRSA
     - TwitterCore
     - TwitterKit
 
@@ -203,9 +208,10 @@ SPEC CHECKSUMS:
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   Protobuf: 8a9838fba8dae3389230e1b7f8c104aa32389c03
   SDWebImage: 791bb72962b3492327ddcac4b1880bd1b5458431
+  SwiftyRSA: 28e1c9ab1f396fd3001d197ba03e1153b524d155
   TwitterCore: 644d59e75abccb26cf0a9050d2c4dea0e5412241
   TwitterKit: a2e60ddcedbf54091eac6f27685ca7a87681e1d7
 
-PODFILE CHECKSUM: a3b522106fe844a6be3cda98bc4facdfa344c4d4
+PODFILE CHECKSUM: be3023b3e0378dd1ac1c9f55b64be7c1aca7f311
 
 COCOAPODS: 1.5.0

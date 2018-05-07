@@ -18,7 +18,6 @@ class TestViewController: UIViewController {
         //let udid = UIDevice.current.identifierForVendor!.uuidString
         
         print("-----------------------------")
-        coordinator.getUsers()
     }
     
 //    func encryptionTest()

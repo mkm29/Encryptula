@@ -50,4 +50,16 @@ class FirebaseClient  {
         }
     }
     
+    func getAllQuestions(completion: @escaping (_ error: Error?, _ questions: [Question]?) -> Void) {
+        if let ref = rootRef {
+            ref.child("survey").observeSingleEvent(of: .value) { (snapshot) in
+                print("Questions: ",snapshot.children.allObjects.count)
+                
+                let questions = snapshot.children.allObjects
+                
+                
+            }
+        }
+    }
+    
 }

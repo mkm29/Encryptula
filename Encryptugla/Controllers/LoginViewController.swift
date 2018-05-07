@@ -17,6 +17,7 @@ import FirebasePhoneAuthUI
 class LoginViewController: UIViewController, FUIAuthDelegate {
     
     var authUI: FUIAuth?
+    let coordinator: Coordinator = Coordinator.shared
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,11 +38,6 @@ class LoginViewController: UIViewController, FUIAuthDelegate {
         self.authUI?.providers = providers
     }
     
-    private func setup() {
-        
-    }
-    
-    
     private func presentLogin() {
         guard let authVC = self.authUI else {
             print("Must instantiate authUI first!")
@@ -58,14 +54,26 @@ class LoginViewController: UIViewController, FUIAuthDelegate {
     func authUI(_ authUI: FUIAuth, didSignInWith user: FirebaseAuth.User?, error: Error?) {
         // handle user and error as necessary
         guard error == nil else {
-            print("Unable to login: %@", error?.localizedDescription)
+            print("Unable to login: ", error?.localizedDescription as Any)
             return
         }
         if let user = user {
-            print("Logged in as uid: %@", user.uid)
+            print("Logged in as uid: ", user.uid)
             // set the user in Coordinator
-            Coordinator.shared.user = user
-            self.performSegue(withIdentifier: "showQuestionsFromLogin", sender: nil)
+            coordinator.firebaseUser = user
+            
+            coordinator.firebase.getAllUsers { (error, users) in
+                guard error == nil else {
+                    print(error?.localizedDescription as Any)
+                    return
+                }
+                if let users = users {
+                    self.coordinator.users = users
+                } else {
+                    print("unable to get users")
+                }
+                self.performSegue(withIdentifier: "showQuestionsFromLogin", sender: nil)
+            }
         }
     }
 

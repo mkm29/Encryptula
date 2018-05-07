@@ -11,6 +11,8 @@
 		AF03B02C20993C8B00C00636 /* WatsonCredentials.json in Resources */ = {isa = PBXBuildFile; fileRef = AF03B02B20993C8B00C00636 /* WatsonCredentials.json */; };
 		AF03B02E20993DB900C00636 /* nlp.json in Resources */ = {isa = PBXBuildFile; fileRef = AF03B02D20993DB900C00636 /* nlp.json */; };
 		AF03B0302099ECF600C00636 /* QuestionAnalysis.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF03B02F2099ECF600C00636 /* QuestionAnalysis.swift */; };
+		AF42A10320A10E8300FDDFAA /* private.pem in Resources */ = {isa = PBXBuildFile; fileRef = AF42A10120A10E8300FDDFAA /* private.pem */; };
+		AF42A10420A10E8300FDDFAA /* public.pem in Resources */ = {isa = PBXBuildFile; fileRef = AF42A10220A10E8300FDDFAA /* public.pem */; };
 		AF4E211A209604D0005D3DCC /* GoogleLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4E2119209604D0005D3DCC /* GoogleLanguage.swift */; };
 		AF66129D208F97AE00AAE6E7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AF66129C208F97AE00AAE6E7 /* GoogleService-Info.plist */; };
 		AF70B270209F6AAD003C8E02 /* FirebaseClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF70B26F209F6AAD003C8E02 /* FirebaseClient.swift */; };
@@ -33,8 +35,6 @@
 		AFA4A9EB209501D000733ECE /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA4A9EA209501D000733ECE /* Response.swift */; };
 		AFA4A9ED209501E400733ECE /* Blockchain.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA4A9EC209501E400733ECE /* Blockchain.swift */; };
 		AFB2F1D9209BE8470001AF56 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFB2F1D8209BE8460001AF56 /* Security.framework */; };
-		AFC6FCBB209E71B2008AA891 /* certificate.pem in Resources */ = {isa = PBXBuildFile; fileRef = AFC6FCBA209E71B2008AA891 /* certificate.pem */; };
-		AFC6FCBD209E8029008AA891 /* certificate.der in Resources */ = {isa = PBXBuildFile; fileRef = AFC6FCBC209E731A008AA891 /* certificate.der */; };
 		AFEB8AE9209E13DB00D62F0F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEB8AE8209E13DB00D62F0F /* Constants.swift */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +45,8 @@
 		AF03B02B20993C8B00C00636 /* WatsonCredentials.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = WatsonCredentials.json; sourceTree = "<group>"; };
 		AF03B02D20993DB900C00636 /* nlp.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = nlp.json; sourceTree = "<group>"; };
 		AF03B02F2099ECF600C00636 /* QuestionAnalysis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionAnalysis.swift; sourceTree = "<group>"; };
+		AF42A10120A10E8300FDDFAA /* private.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = private.pem; path = .keys/private.pem; sourceTree = SOURCE_ROOT; };
+		AF42A10220A10E8300FDDFAA /* public.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = public.pem; path = .keys/public.pem; sourceTree = SOURCE_ROOT; };
 		AF4E2119209604D0005D3DCC /* GoogleLanguage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleLanguage.swift; sourceTree = "<group>"; };
 		AF66129C208F97AE00AAE6E7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AF66129E208F9A0000AAE6E7 /* Encryptugla.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Encryptugla.entitlements; sourceTree = "<group>"; };
@@ -72,8 +74,6 @@
 		AFA4A9EA209501D000733ECE /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		AFA4A9EC209501E400733ECE /* Blockchain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blockchain.swift; sourceTree = "<group>"; };
 		AFB2F1D8209BE8460001AF56 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		AFC6FCBA209E71B2008AA891 /* certificate.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = certificate.pem; sourceTree = "<group>"; };
-		AFC6FCBC209E731A008AA891 /* certificate.der */ = {isa = PBXFileReference; lastKnownFileType = file; path = certificate.der; sourceTree = "<group>"; };
 		AFEB8AE8209E13DB00D62F0F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -188,8 +188,6 @@
 			isa = PBXGroup;
 			children = (
 				AF72CD14208E9C1000940023 /* AppDelegate.swift */,
-				AFC6FCBA209E71B2008AA891 /* certificate.pem */,
-				AFC6FCBC209E731A008AA891 /* certificate.der */,
 				AF8E29212097DE4B0024C9F1 /* questions.json */,
 				AF03B02D20993DB900C00636 /* nlp.json */,
 				AF72CD18208E9C1000940023 /* Main.storyboard */,
@@ -202,6 +200,8 @@
 		AF8E292920981FA90024C9F1 /* Encrypt */ = {
 			isa = PBXGroup;
 			children = (
+				AF42A10120A10E8300FDDFAA /* private.pem */,
+				AF42A10220A10E8300FDDFAA /* public.pem */,
 				AF72CD26208E9C2F00940023 /* Encrypt.swift */,
 				AF72CD2A208F61AF00940023 /* Date+Extension.swift */,
 				AFA4A9E72094F93400733ECE /* Encryptugla-Bridging-Header.h */,
@@ -298,14 +298,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF42A10420A10E8300FDDFAA /* public.pem in Resources */,
 				AF8E29222097DE4B0024C9F1 /* questions.json in Resources */,
 				AF72CD1F208E9C1100940023 /* LaunchScreen.storyboard in Resources */,
-				AFC6FCBB209E71B2008AA891 /* certificate.pem in Resources */,
 				AF66129D208F97AE00AAE6E7 /* GoogleService-Info.plist in Resources */,
-				AFC6FCBD209E8029008AA891 /* certificate.der in Resources */,
 				AF03B02E20993DB900C00636 /* nlp.json in Resources */,
 				AF72CD1C208E9C1100940023 /* Assets.xcassets in Resources */,
 				AF03B02C20993C8B00C00636 /* WatsonCredentials.json in Resources */,
+				AF42A10320A10E8300FDDFAA /* private.pem in Resources */,
 				AF72CD1A208E9C1000940023 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -379,6 +379,7 @@
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyRSA/SwiftyRSA.framework",
 				"${PODS_ROOT}/TwitterCore/iOS/TwitterCore.framework",
 				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
@@ -399,6 +400,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyRSA.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterCore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",

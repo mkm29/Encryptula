@@ -11,5 +11,5 @@ target 'Encryptugla' do
   pod 'Firebase/Auth'
   pod 'FirebaseUI', '~> 4.0' 
 #  pod 'RNCryptor'
-
+  pod 'SwiftyRSA'
 end
