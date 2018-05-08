@@ -18,6 +18,19 @@ class TestViewController: UIViewController {
         //let udid = UIDevice.current.identifierForVendor!.uuidString
         
         print("-----------------------------")
+        let plainText = "Mitchell Murphy"
+        guard let cipherText = coordinator.encrypt.encrypt(text: plainText) else {
+            print("Unable to encrypt text.")
+            return
+        }
+        print("Successfully encrypted text: \(cipherText)")
+        
+        // now lets decrypt
+        guard let decryptedText = coordinator.encrypt.decrypt(cipherText: cipherText) else {
+            print("Unablel to decrypt text :(")
+            return
+        }
+        print("Successfully decrypted text: \(decryptedText)")
     }
     
 //    func encryptionTest()
